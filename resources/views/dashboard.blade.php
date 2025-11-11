@@ -19,7 +19,9 @@
                     </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+
+
+                    <a class="text-decoration-none   btn btn-primary" href={{ route("project.index") }}>Vai ai tuoi Progetti</a>
                 </div>
             </div>
         </div>
