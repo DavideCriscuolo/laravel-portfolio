@@ -22,8 +22,16 @@
         <p> </p>
         {{ $project->tools }}
     </div>
-    <div class="my-5">
-        <a class="text-decoration-none text-black btn btn-warning" href="{{ route("project.index") }}">Torna a tutti i Progetti</a>
+    <div class="d-flex gap-2">
+
+
+        <div class="my-5">
+            <a class="text-decoration-none text-black btn btn-primary" href="{{ route("project.index") }}">Torna a tutti i Progetti</a>
+        </div>
+             <div class="my-5">
+            <a class="text-decoration-none text-black btn btn-warning" href="{{ route("project.edit",$project->id) }}">Modifica il progetto</a>
+        </div>
+        
     </div>
 </div>
 
