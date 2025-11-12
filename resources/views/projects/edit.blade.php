@@ -57,6 +57,19 @@
 <div class="my-2">
     <a class="btn btn-outline-primary" href="{{ route("project.index") }}">Torna ai progetti</a>
 </div>
+
+<div>
+<div class="my-4"> <h3>Dati attuali del progetto</h3></div>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title"><strong> Titolo:</strong> {{$project->title}}</h4>
+            <p class="card-text"><strong> Descrizione: </strong>{{ $project->content }}</p>
+                <p class="card-text"><strong>Tools: </strong>{{ $project->tools }}</p>
+        </div>
+    </div>
+</div>
+
+
 </div>
 
 
