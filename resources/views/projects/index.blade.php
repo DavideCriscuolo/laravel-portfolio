@@ -3,8 +3,17 @@
 @section("content")
 
 <div class="container my-5">
-    <h1 class="text-center my-3">Tutti i miei Progetti</h1>
 
+    <div class="d-flex align-items-center justify-content-between">
+
+        <div>
+            <h1 class="text-center my-3">Tutti i miei Progetti</h1>
+    
+        </div>
+    <div>
+    <a href="{{ route("project.create") }}" class="btn btn-outline-dark">Aggiungi un nuovo progetto</a>
+    </div>
+    </div>
     <div class="row row-cols-1 row-cols-sm-2">
 
 

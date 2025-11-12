@@ -23,7 +23,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view("projects.create");
     }
 
     /**
@@ -31,7 +31,15 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $newProject = new Project();
+        $newProject->title = $data["title"];
+        $newProject->content = $data["content"];
+        $newProject->tools = $data["tools"];
+        $newProject->save();
+
+        return redirect()->route("project.index");
     }
 
     /**

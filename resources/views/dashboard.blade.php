@@ -10,17 +10,13 @@
             <div class="card">
                 <div class="card-header">{{ __('User Dashboard') }}</div>
                 <div class="card-body">
+              
                     <h1>Ciao {{ $user->name }}</h1>
-
-
                     @if (session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}
                     </div>
                     @endif
-
-
-
                     <a class="text-decoration-none   btn btn-primary" href={{ route("project.index") }}>Vai ai tuoi Progetti</a>
                 </div>
             </div>
