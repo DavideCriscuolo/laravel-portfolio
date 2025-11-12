@@ -4,7 +4,7 @@
 
 <div class="container my-5">
 
-    <div class="d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center justify-content-between flex-wrap">
 
         <div>
             <h1 class="text-center my-3">Tutti i miei Progetti</h1>
