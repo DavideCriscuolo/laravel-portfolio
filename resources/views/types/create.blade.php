@@ -33,7 +33,7 @@
 </div>
 
 <div class="my-2">
-    <a class="btn btn-outline-primary" href="{{ route("type.index") }}">Torna ai progetti</a>
+    <a class="btn btn-outline-primary" href="{{ route("type.index") }}">Torna alla tipologia</a>
 </div>
 </div>
 
