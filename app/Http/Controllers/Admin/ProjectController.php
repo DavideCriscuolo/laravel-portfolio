@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
+use App\Models\Type;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -23,7 +24,10 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view("projects.create");
+
+        $types = Type::all(); // per prendere i type
+
+        return view("projects.create", compact("types"));
     }
 
     /**
