@@ -13,6 +13,7 @@
     <div>
     <a href="{{ route("project.create") }}" class="btn btn-outline-dark">Aggiungi un nuovo progetto</a>
     </div>
+    <div>  <a href="{{ route("type.index") }}" class="btn btn-outline-dark">Tipologie di Progetto</a></div>
     </div>
     <div class="row row-cols-1 row-cols-sm-2">
 

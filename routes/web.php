@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\TypeContoller;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,4 +28,6 @@ Route::middleware(["auth", "verified"])->group(function () {
 
 
 Route::resource("project", ProjectController::class)->middleware(["auth", "verified"]);
+
+Route::resource("type", TypeContoller::class)->middleware(["auth", "verified"]);
 require __DIR__ . '/auth.php';
