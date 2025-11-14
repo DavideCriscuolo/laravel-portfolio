@@ -41,6 +41,7 @@ class ProjectController extends Controller
         $newProject->title = $data["title"];
         $newProject->content = $data["content"];
         $newProject->tools = $data["tools"];
+        $newProject->type_id = $data["type_id"];
         $newProject->save();
 
         return redirect()->route("project.index");
@@ -59,8 +60,9 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
+        $types = Type::all();
 
-        return view("projects.edit", compact("project"));
+        return view("projects.edit", compact(["project", "types"]));
     }
 
     /**
@@ -70,6 +72,7 @@ class ProjectController extends Controller
     {
         $project->title = $request["title"];
         $project->tools = $request["tools"];
+        $project->type_id = $request["type_id"];
         $project->content = $request["content"];
         $project->save();
         return redirect()->route("project.show", compact("project"));

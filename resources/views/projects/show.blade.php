@@ -22,6 +22,10 @@
         <p> </p>
         {{ $project->tools }}
     </div>
+
+    <div>
+        <span>Tipo di Progetto: {{ $project->type->name }}</span>
+    </div>
     <div class="d-flex gap-2">
 
 
