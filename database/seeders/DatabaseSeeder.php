@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Technology;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -21,6 +22,6 @@ class DatabaseSeeder extends Seeder
         // ]);
 
 
-        $this->call([TypeSeeder::class, ProjectSeed::class]);
+        $this->call([TypeSeeder::class, ProjectSeed::class, Technology::class]);
     }
 }
