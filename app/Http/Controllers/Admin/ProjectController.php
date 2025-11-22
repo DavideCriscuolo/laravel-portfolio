@@ -46,6 +46,12 @@ class ProjectController extends Controller
         $newProject->type_id = $data["type_id"];
         $newProject->save();
 
+        if ($newProject->has("technologies")) {
+
+            $newProject->technologies()->attach($data["techs"]);
+        }
+
+
         return redirect()->route("project.index");
     }
 

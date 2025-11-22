@@ -24,8 +24,17 @@
     </div>
 
     <div>
-        <span>Tipo di Progetto: {{ $project->type->name }}</span>
+        <p>Tipo di Progetto: {{ $project->type->name }}</p>
     </div>
+    <div >
+        <h4>Tecnologie Utilizzate</h4>
+            <ul class="list-unstyled ">
+    @foreach ($project->technologies as $tech )
+
+                <li class="badge bg-secondary  ">{{ $tech->name }}</li>
+                @endforeach
+            </ul>
+        </div>
     <div class="d-flex gap-2">
 
 
