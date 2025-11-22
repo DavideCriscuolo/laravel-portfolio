@@ -60,6 +60,14 @@
         <textarea class="form-control" name="content" id="content" rows="3"></textarea>
       </div>
         <div>
+               @foreach ($technologies as $tech)
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="techs[{{ $tech->id }}]" value="{{ $tech->id }}" id="{{ $tech->id }}"  {{ $project->technologies->contains($tech->id) ? "checked": ""}} />
+        <label class="form-check-label" for="{{ $tech->id }}"> {{ $tech->name }}</label>
+      </div>
+   
+      
+      @endforeach
             <button class="btn btn-success" type="submit">Modifica</button>
         </div>
     </form>

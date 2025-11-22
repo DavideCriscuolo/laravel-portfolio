@@ -70,7 +70,8 @@ class ProjectController extends Controller
     {
         $types = Type::all();
 
-        return view("projects.edit", compact(["project", "types"]));
+        $technologies = Technology::all();
+        return view("projects.edit", compact(["project", "types", "technologies"]));
     }
 
     /**
@@ -82,7 +83,16 @@ class ProjectController extends Controller
         $project->tools = $request["tools"];
         $project->type_id = $request["type_id"];
         $project->content = $request["content"];
-        $project->save();
+        $project->update();
+
+        if ($project->has("technologies")) {
+
+            $project->technologies()->sync($request["techs"]);
+        } else {
+            $project->technologies()->detach();
+        }
+
+
         return redirect()->route("project.show", compact("project"));
     }
 
