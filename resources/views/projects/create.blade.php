@@ -54,6 +54,15 @@
         <label for="content" class="form-label">Descrizione del progetto</label>
         <textarea class="form-control" name="content" id="content" rows="3"></textarea>
       </div>
+
+      @foreach ($technologies as $tech)
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="techs[{{ $tech->id }}]" value="{{ $tech->id }}" id="{{ $tech->id }}" />
+        <label class="form-check-label" for="{{ $tech->id }}"> {{ $tech->name }}</label>
+      </div>
+   
+      
+      @endforeach
         <div>
             <button class="btn btn-success" type="submit">Aggiungi</button>
         </div>
